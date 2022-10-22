@@ -2,11 +2,11 @@ package com.mvvm.mvvmlearnkotlin.model
 import com.google.gson.annotations.SerializedName
 
 
-class WallpaperResp : ArrayList<WallpaperRespItem>()
+class WallpaperResponse : ArrayList<WallpaperResponseItem>()
 
-data class WallpaperRespItem(
+data class WallpaperResponseItem(
     @SerializedName("alt_description")
-    val altDescription: Any? = Any(),
+    val altDescription: String? = "",
     @SerializedName("blur_hash")
     val blurHash: String? = "",
     @SerializedName("color")
@@ -66,10 +66,14 @@ data class Sponsorship(
 )
 
 data class TopicSubmissions(
-    @SerializedName("food-drink")
-    val foodDrink: FoodDrink? = null,
-    @SerializedName("travel")
-    val travel: Travel? = null,
+    @SerializedName("3d-renders")
+    val dRenders: DRenders? = null,
+    @SerializedName("experimental")
+    val experimental: Experimental? = null,
+    @SerializedName("people")
+    val people: People? = null,
+    @SerializedName("textures-patterns")
+    val texturesPatterns: TexturesPatterns? = null,
     @SerializedName("wallpapers")
     val wallpapers: Wallpapers? = null
 )
@@ -208,19 +212,27 @@ data class Social(
     val twitterUsername: String? = null
 )
 
-data class FoodDrink(
+data class DRenders(
     @SerializedName("status")
     val status: String? = null
 )
 
-data class Travel(
+data class Experimental(
+    @SerializedName("status")
+    val status: String? = null
+)
+
+data class People(
+    @SerializedName("status")
+    val status: String? = null
+)
+
+data class TexturesPatterns(
     @SerializedName("status")
     val status: String? = null
 )
 
 data class Wallpapers(
-    @SerializedName("approved_on")
-    val approvedOn: String? = null,
     @SerializedName("status")
     val status: String? = null
 )
