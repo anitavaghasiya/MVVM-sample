@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_wallpaper">
+    <fragment
+        android:id="@+id/navigation_wallpaper"
+        android:name="com.mvvm.mvvmlearnkotlin.ui.dashboard.ui.Wallpaper.WallpaperFragment"
+        android:label="@string/title_wallpaper"
+        tools:layout="@layout/fragment_wallpaper" />
+
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="com.mvvm.mvvmlearnkotlin.ui.dashboard.ui.Favorite.FavoriteFragment"
+        android:label="@string/title_favorite"
+        tools:layout="@layout/fragment_favorite" />
+
+    <fragment
+        android:id="@+id/navigation_download"
+        android:name="com.mvvm.mvvmlearnkotlin.ui.dashboard.ui.download.DownloadFragment"
+        android:label="@string/title_download"
+        tools:layout="@layout/fragment_download" />
+</navigation>

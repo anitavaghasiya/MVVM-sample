@@ -1,9 +1,14 @@
 package com.mvvm.mvvmlearnkotlin.model
+
+import androidx.annotation.NonNull
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 
 class WallpaperResponse : ArrayList<WallpaperResponseItem>()
 
+@Entity
 data class WallpaperResponseItem(
     @SerializedName("alt_description")
     val altDescription: String? = "",
@@ -20,7 +25,9 @@ data class WallpaperResponseItem(
     @SerializedName("height")
     val height: Int? = 0,
     @SerializedName("id")
-    val id: String? = "",
+    @PrimaryKey
+    @NonNull
+    val id: String,
     @SerializedName("liked_by_user")
     val likedByUser: Boolean? = false,
     @SerializedName("likes")
@@ -43,6 +50,7 @@ data class WallpaperResponseItem(
     val width: Int? = 0
 )
 
+
 data class Links(
     @SerializedName("download")
     val download: String? = null,
@@ -53,6 +61,7 @@ data class Links(
     @SerializedName("self")
     val self: String? = null
 )
+
 
 data class Sponsorship(
     @SerializedName("impression_urls")
@@ -78,6 +87,7 @@ data class TopicSubmissions(
     val wallpapers: Wallpapers? = null
 )
 
+@Entity
 data class Urls(
     @SerializedName("full")
     val full: String? = null,

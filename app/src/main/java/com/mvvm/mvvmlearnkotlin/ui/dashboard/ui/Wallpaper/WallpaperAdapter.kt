@@ -1,4 +1,4 @@
-package com.mvvm.mvvmlearnkotlin.main.adapter
+package com.mvvm.mvvmlearnkotlin.ui.dashboard.ui.Wallpaper
 
 import android.view.LayoutInflater
 import android.view.View
@@ -10,12 +10,13 @@ import com.mvvm.mvvmlearnkotlin.model.WallpaperResponseItem
 import kotlinx.android.synthetic.main.item_layout.view.*
 
 
-class MainAdapter(private val wallpaperResponseItemArrayList: ArrayList<WallpaperResponseItem>) : RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
+class WallpaperAdapter(private val wallpaperResponseItemArrayList: ArrayList<WallpaperResponseItem>) : RecyclerView.Adapter<WallpaperAdapter.DataViewHolder>() {
 
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(wallpaper: WallpaperResponseItem) {
             itemView.apply {
+                //todo uncomment
                 Glide.with(imageViewAvatar.context)
                     .load(wallpaper.urls?.regular)
                     .into(imageViewAvatar)

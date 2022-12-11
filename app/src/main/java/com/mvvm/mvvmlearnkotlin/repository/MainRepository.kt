@@ -1,9 +1,13 @@
 package com.mvvm.mvvmlearnkotlin.repository
 
 
-import com.mvvm.mvvmlearnkotlin.api.ApiHelper
+import com.mvvm.mvvmlearnkotlin.model.WallpaperResponse
+import com.mvvm.mvvmlearnkotlin.data.source.WallpaperSource
+import com.mvvm.mvvmlearnkotlin.utils.Resource
 
-class MainRepository(private val apiHelper: ApiHelper) {
+class MainRepository(private val wallpaperSource: WallpaperSource) {
 
-    suspend fun getUsers(clientId: String) = apiHelper.getWallpaperData(clientId)
+//    suspend fun getUsers(): Resource<WallpaperResponse?> {
+//        return wallpaperSource.getWallpaperData()
+//    }
 }
